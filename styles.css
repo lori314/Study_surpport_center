@@ -1,0 +1,217 @@
+*{
+    padding:0;
+    margin: 0;
+}
+header {
+    background-color:rgb(27, 27, 93);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+header ul {
+    position:relative;
+    right:5vw;
+    top:0;
+    line-height:80px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    position: absolute;
+    left:100px;
+    top:0;
+    line-height: 80px;
+    text-shadow: 2px 2px 4px #000;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+header li{
+    display:inline;
+    margin-right: 4vw;
+}
+.first{
+ 
+    background-image: url("https://t10.baidu.com/it/u=2427823743,180009603&fm=30&app=106&f=PNG?w=640&h=399&s=F1A49F50C7D84E6F02F3AD41030080BA");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:700px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first a{
+    color:black;
+    text-decoration:none;
+    border:1px solid black;
+    padding:10px 15px;
+    border-radius: 5px;
+    line-height: 1.8em;
+    
+
+}
+.first h2{
+    font-size: 60px;
+    line-height: 2em;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+
+}
+.first h3{
+    font-size: 40px;
+    line-height: 1.5em;
+    color: midnightblue;
+    text-align: center;
+    
+}
+.first h4{
+    font-size: 20px;
+    line-height: 1.5em;
+    color: black;
+    text-align: center;
+    
+}
+
+.quote{
+   background-color: rgb(39, 64, 110);
+    height:300px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quote p1{
+    font-size: 30px;
+    line-height: 2em;
+    text-align: center;
+    color: white;
+
+}
+.quote p{
+    
+    font-size: 25px;
+    line-height: 1.8em;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+footer{
+    background-color: black;
+    color:darkgrey;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}
+.picture{
+display:flex;
+}
+.picture img{
+    width:60%;
+}
+.info{
+    witdh:40%;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 80px;
+}
+.info p1{
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+}
+.info p2{
+    text-align: center;
+    font-size: 20px;
+    line-height: 2em;
+}
+.act{
+    display: flex;
+    background-color:lightblue;
+    justify-content:space-between;
+    align-items:center;
+    padding:100px 180px 80px;
+
+}
+.act div{
+    width: 300px;
+    text-align: center;
+
+}
+.act img{
+    width: 100%;
+    border-radius: 10px;
+    transition-duration:  0.5s;
+
+}
+.act img:hover{
+    transform: scale(1.1);
+}
+.act h3{
+    font-size: 30px;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+
+}
+.act p{
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.act a{
+    color:black;
+    text-decoration:none;
+
+    padding:10px 15px;
+
+    line-height: 1.8em;
+    transition-duration:  0.5s;
+
+
+}
+.act a:hover{
+    text-decoration: underline;
+}
+.newsletter{
+    background-color: darkslategrey;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+}
+.newsletter p{
+    margin-top: 0px;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}

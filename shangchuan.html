@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f5ff; /* 蓝色调背景 */
+      padding: 20px;
+    }
+    #uploadedContent {
+      margin-top: 20px;
+    }
+    .uploadedItem {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ffffff; /* 白色背景 */
+    }
+    .uploadedItem img {
+      max-width: 100%; /* 图片适应页面大小 */
+      height: auto;
+    }
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 2px solid #2c3e50; /* 深蓝色分割线 */
+    }
+  </style>
+  <script>
+    function uploadFile() {
+      var fileInput = document.getElementById('fileInput');
+      var textInput = document.getElementById('textInput');
+      var uploadedContent = document.getElementById('uploadedContent');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; // 清空选择的文件
+        textInput.value = ''; // 清空输入文本
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox() {
+      var textbox = document.getElementById("inputTextbox");
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+  </script>
+  <title>答疑墙</title>
+</head>
+<body>
+  <h1>答疑墙</h1>
+  <button onclick="toggleTextbox()">显示/隐藏文本框</button>
+<br><br>
+<div id="inputTextbox" style="display:none;">
+  <input type="file" id="fileInput">
+  <textarea id="textInput" placeholder="输入文字..."></textarea>
+  <button onclick="uploadFile()">上传</button>
+</div>
+  <div id="uploadedContent"></div>
+  <hr>
+</body>
+</html>

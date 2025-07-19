@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="题库.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+    
+
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    <button class="fixed-button" onclick="goBack()">返回</button>
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="高代.jpg" alt="高代">
+        </a>
+            <h3><a href="#">高代</a></h3>
+        
+        </div>
+        <div class="wenzi" id="gaodai">
+            <h3><a href="高代题库.html" style="color: aliceblue;">题库</a><br>
+            <a href="高代课件及教材.html">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br>
+            <h2>高代往年题</h2>
+            <br><br>
+            <p class="wendang">期中往年题>><br>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\17高代.doc">2017-2018年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\18高代.pdf">2018-2019年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\工科高代2019年秋期中试题.pdf">2019-2020年高等代数</a><br>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\往年期中题重制版\高代期中2020年及答案.pdf">2020-2021年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\往年期中题重制版\2021期中B(1).pdf">2021-2022年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期中题\往年期中题重制版\2022期中A(1).pdf">2022-2023年高等代数</a><br>
+                期末往年题>><br>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期末题\2014线代.pdf">2014-2015年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期末题\2015——2016学年第一学期期末试题.doc">2015-2016年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期末题\2016秋工科高等代数期末考试题A.doc">2016-2017年高等代数</a><br>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期末题\2017-2018期末练习题.pdf">2017-2018年高等代数</a>
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\往年期末题\2018-2019工科高等代数试题-答案终.docx">2018-2019年高等代数</a>
+            </p>
+            <div id="btn">
+                <a href="线性代数\61cc02c831027dde02c8241eaf7c4240_ebf89ec7e1f3853f06379c0630434c0f_8\高代\高代往年题.zip">
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

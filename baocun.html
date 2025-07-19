@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>图片和文本上传</title>
+  <script>
+    function saveData() {
+      // 获取用户输入的文本
+      var textContent = document.getElementById('textContent').value;
+
+      // 从文件输入框中获取用户上传的图片文件
+      var fileInput = document.getElementById('imageFile');
+      var file = fileInput.files[0];
+      
+      // 创建一个 URL 对象，以便稍后在存储用户上传的图片路径时使用
+      var imageURL = URL.createObjectURL(file);
+
+      // 将图片路径和文本内容保存到浏览器的本地存储中
+      localStorage.setItem('imageURL', imageURL);
+      localStorage.setItem('textContent', textContent);
+
+      alert('图片和文本已保存');
+    }
+  </script>
+</head>
+<body>
+  <h1>上传图片和文本</h1>
+  <input type="file" id="imageFile">
+  <br>
+  <textarea id="textContent" rows="4" cols="50"></textarea>
+  <br>
+  <button onclick="saveData()">保存</button>
+</body>
+</html>

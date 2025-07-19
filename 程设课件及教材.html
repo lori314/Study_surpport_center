@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="课件及教材.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href=".\enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+        
+            <button class="fixed-button" onclick="goBack()">返回</button>
+      
+        
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="程设.jpg" alt="程设">
+        </a>
+            <h3><a href="#">程设</a></h3>
+        
+        </div>
+        <div class="wenzi" id="chengshe">
+            <h3><a href="程设题解.html">题解</a><br>
+            <a href="程设课件及教材.html" style="color: aliceblue;">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br>
+            <h2>程设课件</h2>
+            <br><br>
+            <p class="wendang"><a href="资料\程设课件\程设课件\P1.1-chap1-完整版-程序设计引言quickIntro.pdf">P1 程序设计引言</a>
+                <a href="资料\程设课件\程设课件\P2-chap2-C语言编程基础框架framework-toStu.pdf">P2 C语言编程基础框架</a>
+                <a href="资料\程设课件\程设课件\P3-char3-基本数据处理dataProcessing-sy toStu.pdf">P3 基本数据处理</a>
+                <a href="资料\程设课件\程设课件\P4-chap4-结构化编程structProg-sy-toStu.pdf">P4 结构化编程</a><br>
+                <a href="资料\程设课件\程设课件\P5-chap5-函数function-202110-toStu.pdf">P5 函数</a>
+                <a href="资料\程设课件\程设课件\P6-数组-toStu-20211028.pdf">P6 数组</a>
+                <a href="资料\程设课件\程设课件\P7-chap7-pointer1-toStu-202111.pdf">P7 指针1</a>
+                <a href="资料\程设课件\程设课件\P7-1-补充-const指针与数据.pdf">P7 补充 const指针与数据</a>
+                <a href="资料\程设课件\程设课件\P8-chap7-pointer2-202111-sy-toStu-打印版.pdf">P8 指针2</a>
+                <a href=""></a>
+                <a href=""></a>
+            </p>
+            <br>
+            <h2>程序设计教参</h2>
+            <br><br>
+            <p class="wendang"><a href="资料\程设课件\OJ指南.pdf">OJ指南</a>
+                <a href="资料\程设课件\我会自己debug.pdf">我会自己debug</a>
+                <a href="资料\程设课件\codeblocks 使用与调试教程(๑•͈ᴗ•͈)❀.pdf">codeblocks 使用与调试教程</a><br>
+                <a href="资料\程设课件\Dev C++ IDE安装指南.pdf">Dev C++ IDE安装指南</a>
+                <a href="资料\程设课件\程设课件\知识点总结.pdf">程设知识点总结</a></p>
+            <div id="btn">
+                <a href="程设课件\程设课件\程设课件.zip">
+                
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

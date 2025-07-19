@@ -1,0 +1,216 @@
+*{
+    padding:0;
+    margin: 0;
+}
+header {
+    background-color:rgb(27, 27, 93);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+header ul {
+    position:relative;
+    right:5vw;
+    top:0;
+    line-height:80px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    position: absolute;
+    left:100px;
+    top:0;
+    line-height: 80px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+header li{
+    display:inline;
+    margin-right: 4vw;
+}
+.fixed-button {
+    position: fixed;
+    top: 100px; /* 距离顶部的距离 */
+    left: 50px; /* 距离右侧的距离 */
+    width: 130px;
+    height: 70px;
+    background-color: #3458a0;
+    color: white;
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+}
+.fixed-button:hover {
+    background-color: #2980b9; /* 更改悬停时的背景颜色 */
+}
+.first{
+ 
+    background-image: url("答疑.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:800px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first div{
+    background-color: rgba(46, 62, 127, 0.821); 
+
+    color: white;
+    border: 2px solid #3458a0;
+    padding: 30px;
+    border-radius: 10px;
+}
+.first h2{
+    font-size: 60px;
+    line-height: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+
+}
+.first h3{
+    font-size: 40px;
+    line-height: 1.5em;
+    color: rgb(215, 202, 134);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+.first p{
+    font-size: 30px;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.floating-icon {
+    max-width: 200px;
+}
+
+.floating-icon img {
+    width: 100%; /* 设置图片宽度为容器宽度的百分之百 */
+    height: auto; /* 让高度自动根据宽度等比例缩放 */
+}
+.wenzi {
+    position: relative;
+    margin-left: 13px;
+    margin-top: -100px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+#shufen{
+    background-color: #f4be3c;
+}
+#chengshe{
+    background-color: #83b24f;
+}
+#gaodai{
+    background-color: #53b0ef;
+}
+
+ .act{
+    display: flex;
+    background-color:aliceblue;
+    align-items:center;
+    padding:100px 100px 80px;
+
+}
+.act .floating-icon{
+    width: 300px;
+    text-align: center;
+
+}
+.act .floating-icon img{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    transition-duration:  0.5s;
+}
+.act .slider img{
+    width:100px;
+    height:250px;
+}
+.act .floating-icon img:hover{
+    transform: scale(1.1);
+}
+.act h3{
+    font-size: 30px;
+    margin: 20px 0;
+    
+
+}
+.act p{
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.act a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+
+    padding:10px 15px;
+
+    line-height: 1.8em;
+    transition-duration:  0.5s;
+
+
+}
+.act a:hover{
+    text-decoration: underline;
+}
+.newsletter{
+    background-color: darkslategrey;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+}
+.newsletter p{
+    margin-top: 0px;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+footer{
+    background-color: black;
+    color:darkgrey;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}

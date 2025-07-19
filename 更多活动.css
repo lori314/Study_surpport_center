@@ -1,0 +1,201 @@
+*{
+    padding:0;
+    margin: 0;
+}
+header {
+    background-color:rgb(27, 27, 93);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+header ul {
+    position:relative;
+    right:5vw;
+    top:0;
+    line-height:80px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    position: absolute;
+    left:100px;
+    top:0;
+    line-height: 80px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+header li{
+    display:inline;
+    margin-right: 4vw;
+}
+.first{
+ 
+    background-image: url("更多活动背景.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:800px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first div{
+    background-color: rgba(46, 62, 127, 0.821); 
+
+    color: white;
+    border: 2px solid #3458a0;
+    padding: 30px;
+    border-radius: 10px;
+}
+.first h2{
+    font-size: 60px;
+    line-height: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+
+}
+.first h3{
+    font-size: 40px;
+    line-height: 1.5em;
+    color: rgb(215, 202, 134);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+.first p{
+    font-size: 30px;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+.floating-icon-left {
+    position: fixed; /* 使用固定定位 */
+    top: 70%; /* 设置图标距离顶部的距离 */
+    left: 0; /* 将图标固定在屏幕左侧 */
+    transform: translateY(-50%); /* 使图标垂直居中 */
+ 
+    padding: 10px; /* 设置内边距，可根据需要更改 */
+    z-index: 1000; /* 设置图标的层级，确保在其他元素上方 */
+    max-width: 120px;
+}
+
+.floating-icon-left img {
+    width: 100%; /* 设置图片宽度为容器宽度的百分之百 */
+    height: auto; /* 让高度自动根据宽度等比例缩放 */
+}
+.floating-icon-left img{
+
+    transition-duration:  0.5s;
+
+}
+.floating-icon-left img:hover{
+    transform: scale(1.1);
+}
+
+.floating-icon {
+
+    max-width: 200px;
+}
+
+.floating-icon img {
+    width: 100%; /* 设置图片宽度为容器宽度的百分之百 */
+    height: auto; /* 让高度自动根据宽度等比例缩放 */
+}
+
+
+ .act{
+    display: flex;
+    background-color:rgb(137, 218, 199);
+    justify-content:space-between;
+    align-items:center;
+    padding:100px 200px 80px;
+
+}
+.act div{
+    width: 300px;
+    text-align: center;
+
+}
+.act img{
+    width: 100%;
+    border-radius: 10px;
+    transition-duration:  0.5s;
+
+}
+.act img:hover{
+    transform: scale(1.1);
+}
+.act h3{
+    font-size: 30px;
+    margin: 20px 0;
+    
+}
+.act h4{
+    font-size: 20px;
+    margin: 20px 0;
+    
+}
+.act p{
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.act a{
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+
+    padding:10px 15px;
+
+    line-height: 1.8em;
+    transition-duration:  0.5s;
+
+
+}
+.act a:hover{
+    text-decoration: underline;
+}
+.newsletter{
+    background-color: darkslategrey;
+    color: white;
+    padding: 40px 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+}
+.newsletter p{
+    margin-top: 0px;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+footer{
+    background-color: black;
+    color:darkgrey;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}

@@ -1,0 +1,268 @@
+*{
+    padding:0;
+    margin: 0;
+}
+header {
+    margin-top: 0;
+    z-index:1;
+    background-color:rgb(27, 27, 93);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+header ul {
+    position:relative;
+    right:5vw;
+    top:0;
+    line-height:80px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    position: absolute;
+    left:100px;
+    top:0;
+    line-height: 80px;
+    text-shadow: 2px 2px 4px #000;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+header li{
+    display:inline;
+    margin-right: 4vw;
+}
+.duration{
+    height: 80px;
+}
+main{
+    background: linear-gradient(to bottom, #82afe6, #142d4f);
+}
+
+.return{
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.return a>img{
+    height: 50px;
+    
+}
+.Q1{
+    border-radius: 25px;
+    background-color:rgb(255, 255, 255,0.3);
+    position: relative;
+    padding: 20px;
+    margin: 60px;
+    height: auto;
+    width: 1300px;
+    
+}
+.input{
+    width:1280px;
+    height: 100px;
+    font-size: 17px;
+}
+input[type="file"]{
+    background-color: #2980b9;
+    color: white;
+    border-radius: 5px;
+    cursor:pointer;
+    width: 145px;
+}
+.upload{
+    border-radius: 5px;
+    width: 75px;
+    height: 30px;
+    text-align: center;
+    
+}
+.uptent{
+    display: column;
+}
+.uptent img{
+    transition: transform 0.3s ease; 
+    width: 700px;
+    height: auto;
+    max-height: 300px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.uptent img:hover{
+    transform: scale(1.1);
+}
+.uptent p{
+    font-size: 22px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.account{
+    display: flex;
+}
+.account img{
+    margin-left: 30px;
+    height: 60px;
+    width: auto;
+}
+.account p{
+    font-size: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.content{
+    display: flex;
+}
+.content p{
+    font-size: 22px;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.content img{
+    transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+    width: 700px;
+    height: auto;
+    max-height: 300px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.content img:hover{
+    transform: scale(1.1); /* 悬停时将图片放大1.2倍，可以根据需要调整放大倍数 */
+}
+.fixed-button-1 {
+    position: absolute;
+    
+    right: 160px; /* 距离右侧的距离 */
+    
+    width: 80px;
+    height: 40px;
+    background-color: #6180be;
+    color: white;
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+     transition: background-color 0.3s, color 0.3s;
+}
+.fixed-button-1:hover {
+    background-color: #2980b9; /* 更改悬停时的背景颜色 */
+}
+.fixed-button-1.clicked{
+    background-color: grey;
+}
+.fixed-button-2 {
+    
+    position: absolute;
+    
+    right: 60px; /* 距离右侧的距离 */
+    
+    width: 80px;
+    height: 40px;
+    background-color: #6180be;
+    color: white;
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+}
+.fixed-button-2:hover {
+    background-color: #2980b9; /* 更改悬停时的背景颜色 */
+}
+.turn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 620px;
+}
+.fixed-button {
+    margin-left: 30px;
+
+    width: 80px;
+    height: 40px;
+    background-color: #6180be;
+    color: white;
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+}
+.fixed-button-2:hover {
+    background-color: #2980b9; /* 更改悬停时的背景颜色 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.newsletter{
+    background-color: darkslategrey;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+}
+.newsletter p{
+    margin-top: 0px;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+footer{
+    background-color: black;
+    color:darkgrey;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}

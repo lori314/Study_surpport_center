@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="大佬笔记.css">
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href=".\enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+        <button class="fixed-button" onclick="goBack()">返回</button>
+    
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    
+    <div class="mainbody" style="margin-top:0;">
+        <br><br><br><br><br><br>
+        <h4 style="font-size: 40px;text-align: left;margin-top: 0;">数分大佬笔记>></h4>
+        <div class="slideshow-container">
+            <div class="mySlides fade1">
+              <img class="note" src="大佬笔记.png" style="width:100%">
+            </div>
+            <div class="mySlides fade1">
+              <img class="note" src="大佬笔记2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade1">
+              <img class="note" src="大佬笔记3.png" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides1(-1)">&#10094;</a >
+            <a class="next" onclick="plusSlides1(1)">&#10095;</a >
+        </div>
+    </div>
+    <div class="mainbody">
+        <h4 style="font-size: 40px;text-align: left;">程设大佬笔记>></h4>
+        <div class="slideshow-container">
+            <div class="mySlides fade2">
+              <img class="note" src="大佬笔记.png" style="width:100%">
+            </div>
+            <div class="mySlides fade2">
+              <img class="note" src="大佬笔记2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade2">
+              <img class="note" src="大佬笔记3.png" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides2(-1)">&#10094;</a >
+            <a class="next" onclick="plusSlides2(1)">&#10095;</a >
+        </div>
+    </div>
+    <div class="mainbody">
+        <h4 style="font-size: 40px;text-align: left;">高代大佬笔记>></h4>
+        <div class="slideshow-container">
+            <div class="mySlides fade3">
+              <img class="note" src="大佬笔记.png" style="width:100%">
+            </div>
+            <div class="mySlides fade3">
+              <img class="note" src="大佬笔记2.png" style="width:100%">
+            </div>
+            <div class="mySlides fade3">
+              <img class="note" src="大佬笔记3.png" style="width:100%">
+            </div>
+          
+            <a class="prev" onclick="plusSlides3(-1)">&#10094;</a >
+            <a class="next" onclick="plusSlides3(1)">&#10095;</a >
+        </div>
+    </div>
+   
+    <section class="newsletter">
+        <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+     <form>
+        <input type="email" placeholder="请输入您的Email" required>
+        <button type="submit">送出</button>
+     </form>
+    </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    <script>
+        var slideIndex = 1;
+        showSlides1(slideIndex);
+        showSlides2(slideIndex);
+        showSlides3(slideIndex);
+
+function plusSlides1(n) {
+  showSlides1(slideIndex += n);
+}
+function plusSlides2(n) {
+  showSlides2(slideIndex += n);
+}
+function plusSlides3(n) {
+  showSlides3(slideIndex += n);
+}
+
+function showSlides1(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides fade1");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides fade2");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+function showSlides3(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides fade3");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+function goBack() {
+  window.location.href="dian.html";
+    }
+      </script>
+    </body>
+    </html>

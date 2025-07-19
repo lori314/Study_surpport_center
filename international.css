@@ -1,0 +1,359 @@
+*{
+    padding:0;
+    margin: 0;
+}
+header {
+    background-color:rgb(27, 27, 93);
+    height:80px;
+    width:100%;
+    position:fixed;
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+header ul {
+    position:relative;
+    right:5vw;
+    top:0;
+    line-height:80px;
+    display: flex;
+    justify-content:flex-end;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    position: absolute;
+    left:100px;
+    top:0;
+    line-height: 80px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+header li{
+    display:inline;
+    margin-right: 4vw;
+}
+
+.quote{
+    background-color: rgb(39, 64, 110);
+     height:300px;
+    
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+ .quote p1{
+     font-size: 30px;
+     line-height: 2em;
+     text-align: center;
+     color: white;
+     text-shadow: 2px 2px 4px #000;
+ }
+ .quote p{
+    text-shadow: 1px 1px 1px #000;
+     font-size: 25px;
+     line-height: 1.8em;
+     text-align: center;
+     color: white;
+ }
+.first{
+ 
+    background-image: url("international-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height:900px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.first div{
+    background-color: rgba(91, 108, 177, 0.721); 
+
+    color: white;
+    border: 2px solid #3458a0;
+    padding: 30px;
+    border-radius: 10px;
+}
+.first h2{
+    font-size: 60px;
+    line-height: 1.5em;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+
+}
+.first h3{
+    font-size: 40px;
+    line-height: 1.5em;
+    color: rgb(215, 202, 134);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+.first p{
+    font-size: 30px;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 2px 2px 4px #000;
+}
+
+
+.container-1 {
+    margin: 25px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: #7095dd; /* 背景颜色 */
+    padding: 15px; /* 内边距，确保内容不紧贴边框 */
+}
+.container-2 {
+    margin: 25px;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    background-color: #7095dd; /* 背景颜色 */
+    padding: 15px; /* 内边距，确保内容不紧贴边框 */
+}
+.container-3 {
+    margin: 25px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: #7095dd; /* 背景颜色 */
+    padding: 15px; /* 内边距，确保内容不紧贴边框 */
+}
+.container-4 {
+    margin: 25px;
+    border: 1px solid #333333;
+    border-radius: 15px;
+    background-color: #7095dd; /* 背景颜色 */
+    padding: 15px; /* 内边距，确保内容不紧贴边框 */
+}
+.article-1 {
+    border: #000;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    overflow: hidden;
+}
+.article-1>img{
+    padding: 30px;
+    width:60%;
+}
+.info{
+    width:40%;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+.info p1{
+    color: rgb(37, 37, 160);
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 30px;
+    margin-left: 160px;
+    font-size: 40px;
+    
+    line-height: 1.8em;
+}
+.info p2{
+ margin-right: 20px;
+    font-size: 25px;
+    line-height: 2em;
+}
+
+
+.article-1>h2 {
+    color: #23282b;
+}
+
+
+
+.article-2 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    overflow: hidden;
+}
+
+.info-2{
+    width:45%;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+.info-2 p1{
+    color: rgb(37, 37, 160);
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 30px;
+    margin-left: 180px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+}
+.info-2 p2{
+ margin-right: 60px;
+    font-size: 25px;
+    line-height: 2em;
+    margin-left: 30px;
+}
+
+
+.article-2>h2 {
+    color: #23282b;
+}
+.article-2>img{
+    padding: 30px;
+    width:55%;
+}
+
+ 
+.article-3 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+
+    overflow: hidden;
+}
+.article-3>img{
+    padding: 30px;
+    width:55%;
+}
+.info-3{
+    margin-top: 30px;
+    width:45%;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+ 
+    margin-left: 40px;
+}
+.info-3 p1{
+    color: rgb(37, 37, 160);
+    text-shadow: 1px 1px 2px #000;
+    margin-left: 180px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+}
+.info-3 p2{
+
+    font-size: 20px;
+    line-height: 2em;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.article-4 {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+   
+
+    overflow: hidden;
+}
+
+.info-4{
+    width:45%;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.info-4 p1{
+    color: rgb(37, 37, 160);
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 30px;
+    margin-left: 150px;
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1.8em;
+}
+.info-4 p2{
+ margin-right: 60px;
+    font-size: 20px;
+    line-height: 2em;
+    margin-left: 30px;
+}
+
+
+.article-4>h2 {
+    color: #23282b;
+}
+.article-4>img{
+    padding: 30px;
+    width:55%;
+}
+.article-3>h2 {
+    color: #23282b;
+}
+.last {
+   
+    text-align:right;
+    background-color:rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+}
+.last>a>button {
+    margin-right: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(79, 109, 191);
+    color: rgb(255, 255, 255);
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+}
+.last>a>button:hover {
+    background-color: #5252d5; /* 更改悬停时的背景颜色 */
+}
+.newsletter{
+    background-color: darkslategrey;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+}
+.newsletter p{
+    margin-top: 0px;
+    font-size: 15px;
+    line-height: 1.6em;
+}
+.newsletter input,.newsletter button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #949d9a;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+footer{
+    background-color: black;
+    color:darkgrey;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 1.8em;
+}

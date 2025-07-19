@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="课件及教材.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href=".\enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+    
+ 
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    <button class="fixed-button" onclick="goBack()">返回</button>
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="淑芬.jpg" alt="淑芬">
+        </a>
+            <h3><a href="#">淑芬</a></h3>
+        
+        </div>
+        <div class="wenzi" id="shufen">
+            <h3><a href="淑芬题库.html">题库</a><br>
+            <a href="淑芬课件及教材.html" style="color: aliceblue;">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br>
+            <h2>工科数分课件</h2>
+            <br><br>
+            <p class="wendang"><a href="数学分析\Chap1第1-2节 集合的映射与函数.pdf">Chap1第1-2节 集合的映射与函数</a>
+                <a href="数学分析\Chap1第3-4节 势和确界存在定理.pdf">Chap1第3-4节 势和确界存在定理</a><br>
+                <a href="数学分析\Chap2第1节 数列的极限.pdf">Chap2第1节 数列的极限</a>
+                <a href="数学分析\Chap2第2节 数列极限的性质和运算.pdf">Chap2第2节 数列极限的性质和运算</a><br>
+                <a href="数学分析\Chap2第3节 无穷小和无穷大.pdf">Chap2第3节 无穷小和无穷大</a>
+                <a href="数学分析\Chap2第4节 单调数列的极限及其应用.pdf">Chap2第4节 单调数列的极限及其应用</a><br>
+                <a href="数学分析\Chap2第5节 实数连续性的基本定理.pdf">Chap2第5节 实数连续性的基本定理</a>
+                <a href="数学分析\Chap2第6节 上下极限的概念及应用.pdf">Chap2第6节 上下极限的概念及应用</a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </p>
+            <div id="btn">
+                <a href="数学分析\淑芬课件.zip">
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

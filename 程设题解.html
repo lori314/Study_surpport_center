@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="题库.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href=".\enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+        <button class="fixed-button" onclick="goBack()">返回</button>
+        
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="程设.jpg" alt="程设">
+        </a>
+            <h3><a href="#">程设</a></h3>
+        
+        </div>
+        <div class="wenzi" id="chengshe">
+            <h3><a href="程设题库.html" style="color: aliceblue;">题解</a><br>
+            <a href="程设课件及教材.html">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br><br><br>
+            <h2>程序设计题解</h2>
+            <br><br><br>
+            <p class="wendang">上机赛>>
+                <a href="资料\程设课件\C1 - Solution.pdf">C1-Solution</a>
+                <a href="资料\程设课件\C2 - Solution.pdf">C2-Solution</a>
+                <a href="资料\程设课件\C3 - Solution.pdf">C3-Solution</a>
+                <a href="资料\程设课件\C4 - Solution.pdf">C4-Solution</a>
+                <a href="资料\程设课件\C5 - Solution.pdf">C5-Solution</a><br>
+                练习赛>>
+                <a href="资料\程设课件\E1 - Solution.pdf">E1-Solution</a>
+                <a href="资料\程设课件\E2 - Solution.pdf">E2-Solution</a>
+                <a href="资料\程设课件\E3 - Solution.pdf">E3-Solution</a>
+                <a href="资料\程设课件\E4 - Solution.pdf">E4-Solution</a>
+                <a href="资料\程设课件\E5 - Solution.pdf">E5-Solution</a><br>
+                <a href=""></a>
+            </p>
+            <div id="btn">
+                <a href="程设课件\程设题解.zip">
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

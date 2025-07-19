@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心近期回顾</title>
+        <style>
+            .fixed-button {
+                position: fixed;             
+                top:130px; /* 距离顶部的距离 */
+                left: 70px; /* 距离右侧的距离 */
+                width: 130px;
+                height: 70px;
+                background-color: #3458a0;
+                color: white;
+                /* 设置文字居中 */
+                text-align: center;
+                border-radius: 5px;
+                 /* 设置文字大小 */
+ 
+                font-size: 20px;
+                /* 设置按钮边框为无边框 */
+                border: none;
+                /* 添加一些额外的样式，比如鼠标悬停效果 */
+                cursor: pointer;
+                z-index: 9999;
+            } 
+            .fixed-button:hover {
+                background-color: #2980b9; /* 更改悬停时的背景颜色 */
+            }
+            .highlighted {
+                 color: rgb(0, 132, 255);
+            }
+            *{
+                padding:0;
+                margin: 0;
+             }
+            header {
+                background-color:rgb(27, 27, 93);
+                height:80px;
+                width:100%;
+                position:fixed;
+                z-index: 9999;
+                }
+            h1{
+                color: white;
+                text-shadow: 2px 2px 4px #000;
+             }
+            h1{
+                position: absolute;
+                left: 100px;;
+                top:0;
+                line-height: 80px;
+            }
+            header ul {
+                position:relative;
+                right:5vw;
+                top:0;
+                line-height:80px;
+                display: flex;
+                justify-content:flex-end;
+                padding: 5px;
+                font-size: 20px;
+            }
+            header a{
+                 color: white;
+                text-decoration: none;
+            }
+            header a:hover{
+                 text-decoration: underline;
+              }
+
+            header li{
+                display:inline;
+                margin-right: 4vw;
+            }
+            .quo{
+                background-color: rgb(39, 64, 110);
+                height:100px;
+                display: flex;
+                width: 1450px;
+                align-items: center;
+                justify-content: center;
+            }
+            .quo p{
+                font-size: 25px;
+                color: bisque;
+                text-shadow: 2px 2px 4px #000;
+            }
+            .newsletter{
+                background-color: darkslategrey;
+                color: white;
+                padding: 40px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 40px;
+            }
+            .newsletter p{
+                margin-top: 0px;
+                font-size: 15px;
+                line-height: 1.6em;
+             }
+            .newsletter input,.newsletter button{
+                background-color: transparent;
+                color: white;
+                border: 1px solid #949d9a;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 10px;
+            }
+            footer{
+                 background-color: black;
+                  color:darkgrey;
+                height:30px;
+                 display:flex;
+                justify-content: center;
+                 font-size: 14px;
+                line-height: 1.8em;
+            }
+
+
+            .container {
+                position: relative;
+                top: 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+                background-color:aliceblue;
+               
+            }
+
+            .section {
+                margin-bottom: 40px;
+            }   
+            
+            .section-title {
+                font-size: 35px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 680px;
+                padding-top: 50px;
+                color: rgb(38, 0, 255);
+                text-shadow: 1px 1px 1px black;
+            }
+            
+            .section-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .section1 {
+                margin-bottom: 20px;
+            }  
+            .section1-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .section1-content .left {
+               
+               flex: 1;
+               margin-left: 40px;
+               padding-right: 50px;
+               padding-top: 30px;
+               position: relative;
+               left: 50px;
+               width: 800px;
+               height: 500px;
+               
+            }
+           .section1-content .right {
+               
+               flex: 1;
+               padding-left: 80px;
+               padding-top: 100px;
+               position: relative;
+               right: 50px;
+               width: 550px;
+               height: 500px;
+               text-align: center;
+            }
+            .section1-content .right p {
+                font-size: 24px; 
+                line-height: 2.5em;
+                color: rgb(19, 19, 20);
+
+            }
+            .section1-content .text {
+                margin-bottom: 20px;
+                padding-top: 80px;
+            }
+            .section1-content img {
+                
+                height: 500px;
+                width: auto;
+                margin-bottom: 20px;
+            }
+
+            
+            .section-content .left {
+               
+                flex: 1;
+                padding-right: 50px;
+                position: relative;
+                padding-top: 70px;
+                left: 50px;
+                width: 800px;
+                height: 600px;
+                text-align: center;
+                
+            }
+            .section-content .right {
+                
+                flex: 1;
+                padding-left: 120px;
+                position: relative;
+                padding-top: 100px;
+                right: 50px;
+                width: 600px;
+                height: 600px;
+                text-align: center;
+                
+             }
+            .section-content .text {
+                margin-bottom: 20px;
+            }
+            .section-content img {
+                
+                height: 600px;
+                width: auto;
+                margin-bottom: 20px;
+            }
+            .section2-content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .section2-content .left {
+               
+                flex: 1;
+                padding-right: 70px;
+                position: relative;
+                padding-top: 150px;
+                left: 50px;
+                width: 600px;
+                height: 600px;
+                text-align: center;
+                
+            }
+            .section2-content .right {
+                
+                flex: 1;
+                padding-left: 50px;
+                position: relative;
+                padding-top: 70px;
+                width: 800px;
+                height: 600px;
+                
+             }
+            .section2-content .text {
+                margin-bottom: 20px;
+            }
+            .section2-content img {
+                width: 700px;
+                height: 550px;
+                margin-bottom: 20px;
+            }
+            .group-photo img{
+                position: relative;
+                top: 50px;
+                padding-left: 150px;
+                width: 1200px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .group-photo {
+                 margin-top: 40px;
+            }
+            .group-photo p{
+                font-size: 15px; 
+                line-height: 2;
+                color: rgb(19, 19, 20);
+                position: relative;
+                padding-left: 1200px;
+                padding-top: 20px;
+            }
+            .right p {
+                font-size: 24px; 
+                line-height: 2.5;
+                color: rgb(19, 19, 20);
+
+            }
+            .left p {
+                font-size: 24px; 
+                line-height: 2.5;
+                color: rgb(19, 19, 20);
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>学业支持中心</h1>
+            <nav>
+            <ul>
+                <li><a href=".\index.html">首页</a></li>
+                <li><a href="news.html">新闻公告</a></li>
+                <li><a href="#">个人中心</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="enter.html">登录</a></li>
+            </ul>
+        </nav>
+        </header>
+        <button class="fixed-button" onclick="goBack()">返回
+            <script>
+                function goBack() {
+                  window.history.back();
+                }
+              </script>
+        </button>
+
+
+        <div class="container">
+            <div class="section1">
+                 <h2 class="section-title">个人简介</h2>
+                <div class="section1-content">
+                     <div class="left">
+                          <img src=".\y3geren.png" alt="个人照片">
+                      </div>
+                    <div class="right">
+                          <p><strong>网络空间安全学院GPA排名<span class="highlighted">3/110</span></strong></p>
+                         <p><strong>曾获北京航空航天大学优秀生荣誉</p>
+                         <p><strong>现担任网络空间安全学院学生会主席</p>
+                         <p><strong>校团委办公室学生干部</p>
+                         <p><strong>传源书院首席梦拓等职务</p>
+                         <p><strong>曾获社会实践校级<span class="highlighted">一、二等奖</span></strong></p>
+                     </div>
+                </div>
+            </div>
+            <div>
+                <section class="quo">
+                <p><strong>“接纳平凡但不接受平庸，与自己和解，弄清楚我们真正想要什么。”——如钦学长</strong></p>
+
+             </section>
+             </div> 
+
+            <div class="section">
+                <h2 class="section-title">活动现场</h2>
+                <div class="section-content">
+                <div class="left">
+                     <img src=".\y3-3.jpg" alt="活动照片1">
+                </div>
+                <div class="right">
+                    <p><strong>大学学习与高中不相同，更需要同学们在课前进行<span class="highlighted">预习</span>（可借用老师发的ppt）。</strong></p>
+                    <P><strong>当天未听懂课程知识点一定要当天进行<span class="highlighted">复习</span>，否则后面会越积越多。</strong></p>
+
+                    <p><strong>但需要注意大学不只有考试，别忘记留意<span class="highlighted">身边的事和人。</span></strong></p>
+                        
+                    
+                    <p><strong>“该学习的时候学习，该放松的时候放松。</strong></p>
+                        <p><strong><span class="highlighted">不要把自律当成自虐。</span>”</strong></p>
+                </div>
+                </div>
+                <div class="section2-content">
+                <div class="left">
+                     <p><strong>恋爱是大学必修课，我们可以从找搭子做起。</strong></p>
+                     <p><strong>这个过程利于个人成长，掌握为人处世的方法，培养生活情趣，以及<span class="highlighted">认识你自己</span></strong></p>
+                    
+                        
+                    <p><strong> <span class="highlighted">真诚永远是必杀技</span></strong></p>
+                    <p><strong>社会实践并不水，也不是一种形式主义。</strong></p>
+                        
+                    <p><strong>而是我们了解社会民情，交友，探索一种<span class="highlighted">新的生活方式的重要途径。及时反思</span></strong></p>
+                        
+                </div>
+                <div class="right">
+                     <img src=".\y3-audience.jpg" alt="活动照片2">
+                </div>
+                </div>
+                <div class="section-content">
+                    <div class="left">
+                      <img src=".\y3h3.png" alt="活动照片3">
+                    </div>
+                    <div class="right">
+                        <p><strong><span class="highlighted">接纳平凡但不接受平庸</span>，与自己和解</strong></p>
+                        <p><strong><span class="highlighted">健康地活着</span>，永远是最重要的事。</strong></p>
+
+                        <p><strong>面试、答辩、课堂展示、生活都需要“侃侃而谈”的技能。</strong></p>
+                        <p><strong><span class="highlighted">一次专注一件事</span>，四象限工作法，</strong></p>
+                            <p><strong> 调整心态，做不完也不摆烂。</strong></p>
+                        <p><strong>不开心就睡一觉。</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                 <h2 class="section-title">大合照</h2>
+                <div class="group-photo">
+                     <img src=".\y3-group.jpg" alt="大合照">
+                     <p>2023年11月19日  摄影：罗天翼</p>
+                </div>
+            </div>
+        </div>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+            <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+            </form>
+        </section>
+        <footer>
+        <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>

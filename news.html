@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学业支持中心</title>
+    <link rel="stylesheet" href="news.css">
+
+</head>
+
+<body>
+    <header>
+    <h1>学业支持中心</h1>
+    <nav>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">新闻公告</a></li>
+        <li onclick="show()"><a href="#">个人中心</a></li>
+        <script>
+            function show() {
+                alert("请先登录！");
+            }
+        </script>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="enter.html">登录</a></li>
+    </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="lunbotu">
+        <div class="box">
+            <div class="box_img"><a href="https://news.buaa.edu.cn/info/1002/60575.htm"><img src="img1.jpg" width="1440" height="600"></a></div>
+            <div class="box_img"><a href="https://news.buaa.edu.cn/info/1003/60384.htm"><img src="img2.jpg" width="1440" height="600"></a></div>
+            <div class="box_img"><a href="#"><img src="img3.jpg" width="1440" height="600"></a></div>
+            <div class="box_img"><a href="#"><img src="img4.jpg" width="1440" height="600"></a></div>
+            <div class="box_left">&lt;</div>
+            <div class="box_right">&gt;</div>
+            <div class="box_dots">
+                <ul>
+                    <li class="button"></li>
+                    <li class="button"></li>
+                    <li class="button"></li>
+                    <li class="button"></li>
+                </ul>
+            </div>
+        </div>
+        <script src="jquery-3.5.1.min.js"></script>
+        <script>
+            $(function(){
+                var index=0;  //标记当前图片索引
+                var f;
+                timesetter();
+                function timesetter(){
+                    f=setInterval(function(){
+                        if(index==$(".box_img").length-1){
+                            index=0;
+                            $(".box_img").css("opacity","0");
+                            $(".box_img").eq(index).css("opacity","1");
+                        }else{
+                            index++;
+                            $(".box_img").css("opacity","0");
+                            $(".box_img").eq(index).css("opacity","1");
+                        }
+                        $(".button").css("background-color","#ccc");
+                        $(".button").eq(index).css("background-color","#fff");
+                    },3000)
+                }
+                $(".box_left").click(function(){
+                    clearInterval(f);
+                    if(index==0){
+                        index=$(".box_img").length-1;
+                        $(".box_img").css("opacity","0");
+                        $(".box_img").eq(index).css("opacity","1");
+                    }else{
+                        index--;
+                        $(".box_img").css("opacity","0");
+                        $(".box_img").eq(index).css("opacity","1");
+                    }
+                    $(".button").css("background-color","#ccc");
+                    $(".button").eq(index).css("background-color","#fff");
+                    timesetter();
+                })
+                $(".box_right").click(function(){
+                    clearInterval(f);
+                    if(index==$(".box_img").length-1){
+                        index=0;
+                        $(".box_img").css("opacity","0");
+                        $(".box_img").eq(index).css("opacity","1");
+                    }else{
+                        index++;
+                        $(".box_img").css("opacity","0");
+                        $(".box_img").eq(index).css("opacity","1");
+                    }
+                    $(".button").css("background-color","#ccc");
+                    $(".button").eq(index).css("background-color","#fff");
+                    timesetter();
+                })
+
+                    $(".button").click(function(){
+                        clearInterval(f);
+                        var index_1=$(this).index();
+                        index=index_1;
+                        $(".box_img").css("opacity","0");
+                        $(".box_img").eq(index).css("opacity","1");
+                        $(".button").css("background-color","#ccc");
+                        $(".button").eq(index).css("background-color","#fff");
+                        timesetter();
+                })
+            })
+        </script>
+    </section>
+    <section class="news">
+        <div class="left">
+            <p class="text1">2023-2024学年校历<br><span>(点击图片有惊喜哦)</span></p>
+            <img src="calendar.jpg" onclick="zoomImage(this)"> 
+        </div>
+        <img src="calendar.jpg" class="enlarged-image" onclick="hideImage(this)">
+            <script>  
+                function zoomImage(img) {  
+                  var enlargedImg = document.querySelector('.enlarged-image');  
+                  enlargedImg.style.display = "block";  
+                }  
+                  
+                function hideImage(img) {  
+                  img.style.display = "none";  
+                }  
+            </script> 
+        <div class="right">
+            <p class="text2">近期活动</p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/RyPzuKwQ2QQA6f-AokAyug">“源”桌会 | 适应大学生活，完成人生蜕变</a></p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/d2zUVjEyNcO8vlW37DMYPw">“源”桌会 | 学习与学工有益结合，成绩和能力齐头并进</a></p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/RxznE8SY85w4RCpz8MKKIg">传源学支 | 学习互助小组计划开启！期待你的报名！</a></p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/JfAfDvUK_0pmTWx21j5zfQ">“源”桌会 | 第二期：全方位适应大学生活，从融入走向卓越</a></p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/92HL89CuFZsyYQoze0sV4w">“源”桌会 | 多赛道齐头并进 多视角触类旁通</a></p>
+            <p class="text3"><a href="https://mp.weixin.qq.com/s/jiulprpfhGOt2HxdF_e-Bg">“源”你所想，助你所学 | 传源学支期中活动回顾</a></p>
+            <p class="text3"><a href=""></a></p>
+        </div>
+    </section>
+    <section class="newsletter">
+        <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+    <form>
+        <input type="email" placeholder="请输入您的Email" required>
+        <button type="submit">送出</button>
+    </form>
+    </section>
+</main>
+<footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+</footer>
+</body>
+
+</html>

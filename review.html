@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心近期回顾</title>
+        <style>
+            *{
+                padding:0;
+                margin: 0;
+             }
+            header {
+                background-color:rgb(27, 27, 93);
+                height:80px;
+                width:100%;
+                position:fixed;
+                z-index: 9999;
+                }
+            h1{
+                color: white;
+                text-shadow: 2px 2px 4px #000;
+             }
+            h1{
+                position: absolute;
+                left: 100px;;
+                top:0;
+                line-height: 80px;
+            }
+            .first{
+                background-image: url("圆桌会背景3.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height:800px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .first div{
+                background-color: rgba(52, 77, 179, 0.821); 
+                color: white;
+                border: 2px solid #3458a0;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            .first h2{
+                font-size: 60px;
+                line-height: 1.5em;
+                text-align: center;
+                text-shadow: 2px 2px 4px #000;
+            }
+            .first h3{
+                font-size: 40px;
+                line-height: 1.5em;
+                color: rgb(215, 202, 134);
+                text-align: center;
+                text-shadow: 2px 2px 4px #000;
+            }
+            .first p{
+                font-size: 20px;
+                line-height: 1.5em;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                text-shadow: 2px 2px 4px #000;
+            }
+            .quo{
+                background-color: rgb(39, 64, 110);
+                height:300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .quo p1{
+                font-size: 25px;
+                color: bisque;
+                text-shadow: 2px 2px 4px #000;
+            }
+            .container h2{
+                color: rgb(0, 0, 0);
+            }
+            .container h2{
+                display: flex;
+                position: relative;
+                left:60px;
+                top: 20px;
+            }
+
+            header ul {
+                position:relative;
+                right:5vw;
+                top:0;
+                line-height:80px;
+                display: flex;
+                justify-content:flex-end;
+                padding: 5px;
+                font-size: 20px;
+            }
+            header a{
+                color: white;
+                text-decoration: none;
+            }
+            header a:hover{
+                text-decoration: underline;
+            }
+
+            header li{
+                display:inline;
+                margin-right: 4vw;
+                }
+                .fixed-button {
+    
+    margin-left: 530px;
+    margin-top: 0;
+    
+    width: 100px;
+    height: 50px;
+    background-color: #3458a0;
+    color: white;
+     /* 设置文字居中 */
+     text-align: center;
+    border-radius: 5px;
+     /* 设置文字大小 */
+     
+     font-size: 20px;
+ 
+     /* 设置按钮边框为无边框 */
+     border: none;
+ 
+     /* 添加一些额外的样式，比如鼠标悬停效果 */
+     cursor: pointer;
+}
+.fixed-button:hover {
+    background-color: #2980b9; /* 更改悬停时的背景颜色 */
+}
+
+            .newsletter{
+                background-color: darkslategrey;
+                color: white;
+                padding: 40px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 40px;
+            }
+            .newsletter p{
+                margin-top: 0px;
+                font-size: 15px;
+                line-height: 1.6em;
+            }
+            .newsletter input,.newsletter button{
+                background-color: transparent;
+                color: white;
+                border: 1px solid #949d9a;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 10px;
+            }
+            footer{
+                background-color: black;
+                color:darkgrey;
+                height:30px;
+                display:flex;
+                justify-content: center;
+                font-size: 14px;
+                line-height: 1.8em;
+            }
+            .left {
+                display: flex;
+                position: relative;
+                left: 30px;
+                
+            }
+            .left_img {
+                position: absolute;
+                top: 90px;
+                opacity: 0;
+                transition: all 1.5s;
+            }
+            .left_img:first-child {
+                opacity: 1;
+            }
+            .box_left {
+                position: absolute;
+                width: 35px;
+                height: 70px;
+                color: #ccc;
+                top: 315px;
+                border-radius: 0 5px 5px 0;
+                text-align: center;
+                line-height: 70px;
+                font-size: 27px;
+                cursor: pointer;
+            }
+            .box_left:hover {
+                background-color: #00000050;
+                color: #fff;
+            }
+            .box_right {
+                position: absolute;
+                width: 35px;
+                height: 70px;
+                color: #ccc;
+                top: 315px;
+                border-radius: 5px 0 0 5px;
+                text-align: center;
+                line-height: 70px;
+                font-size: 27px;
+                left: 665px;
+                cursor: pointer;
+            }
+            .box_right:hover {
+                background-color: #00000050;
+                color: #fff;
+            }
+            .box_dots ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+            .box_dots li {
+                width: 14px;
+                height: 14px;
+                border-radius: 100%;
+                float: left;
+                margin-right: 15px;
+                background-color: #949d9a;
+            }
+            .box_dots li:first-child {
+                background-color: #fff;
+            }
+            .box_dots li:hover {
+                background-color: #fff;
+            }
+            .box_dots {
+                position: absolute;
+                top: 560px;
+                left: 540px;
+            }
+            .container {
+                height:700px;
+                background-color:aliceblue;
+            }
+
+            
+            .right {
+                position: relative;
+                margin-top:50px;
+                margin-left: 40px;
+                width: 45%; /* 调整右侧部分的宽度 */
+                float: right; /* 右侧部分浮动到右侧 */
+                right: 30px;
+                
+            }
+           .right p1{
+            font-size: 27px;
+           
+        }
+        .right p{
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+            /*.container::after {
+                content: "";
+                display: table;
+                clear: both;
+            }*/
+            
+            .right a {
+                color: blue;
+                text-decoration: none;
+            }
+            .right a:hover {
+                text-decoration: underline;
+            }
+            .container p {
+                font-size: 20px; /* 设置段落的字体大小为16像素 */
+                line-height: 2.5; /* 设置段落的行间距为1.5倍字体大小 */
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    <section class="first">
+        <div>
+        <h2>“源”桌会</h2>
+        <h3>大学生活“开挂”的好帮手</h3>
+        <p>“圆桌会议”是指一种平等、对话的协商会议形式，
+        与会者不分等级围圆桌而坐，每个人都以平等的身份参加会议。</p>
+        <p>北航传源书院举办特色“源”桌会，邀请国奖学长、国励志学长分享心得体会，为大家的大学生活提供指引</p>
+        <p>地点：北航沙河校区</p>
+        <p>联系方式：61716624</p>
+        </div>
+    </section>
+
+
+    <div>
+    <section class="quo">
+    <p1><strong>“如果希望成为一个善于谈话的人，那就先做一个致意倾听的人。”——戴尔·卡耐基</strong></p1>
+    </section>
+    </div> 
+    <section class="container">
+        <h2>"源"桌会>>往期回顾</h2>
+        <div class="left">
+            <div class="left_img"><img src=".\y1s.png" alt="照片" width="700"></div>
+            <div class="left_img"><img src=".\y2s.jpg" alt="照片" width="700"></div>
+            <div class="left_img"><img src=".\y3s.png" alt="照片" width="700"></div>
+            <div class="box_left">&lt;</div>
+            <div class="box_right">&gt;</div>
+            <div class="box_dots">
+                <ul>
+                    <li class="button"></li>
+                    <li class="button"></li>
+                    <li class="button"></li>
+                </ul>
+            </div>
+            <script src="jquery-3.5.1.min.js"></script>
+            <script>
+                $(function(){
+                    var index=0;  //标记当前图片索引
+                    var f;
+                    timesetter();
+                    function timesetter(){
+                        f=setInterval(function(){
+                            if(index==$(".left_img").length-1){
+                                index=0;
+                                $(".left_img").css("opacity","0");
+                                $(".left_img").eq(index).css("opacity","1");
+                            }else{
+                                index++;
+                                $(".left_img").css("opacity","0");
+                                $(".left_img").eq(index).css("opacity","1");
+                            }
+                            $(".button").css("background-color","#ccc");
+                            $(".button").eq(index).css("background-color","#fff");
+                        },3000)
+                    }
+                    $(".box_left").click(function(){
+                        clearInterval(f);
+                        if(index==0){
+                            index=$(".left_img").length-1;
+                            $(".left_img").css("opacity","0");
+                            $(".left_img").eq(index).css("opacity","1");
+                        }else{
+                            index--;
+                            $(".left_img").css("opacity","0");
+                            $(".left_img").eq(index).css("opacity","1");
+                        }
+                        $(".button").css("background-color","#ccc");
+                        $(".button").eq(index).css("background-color","#fff");
+                        timesetter();
+                    })
+                    $(".box_right").click(function(){
+                        clearInterval(f);
+                        if(index==$(".left_img").length-1){
+                            index=0;
+                            $(".left_img").css("opacity","0");
+                            $(".left_img").eq(index).css("opacity","1");
+                        }else{
+                            index++;
+                            $(".left_img").css("opacity","0");
+                            $(".left_img").eq(index).css("opacity","1");
+                        }
+                        $(".button").css("background-color","#ccc");
+                        $(".button").eq(index).css("background-color","#fff");
+                        timesetter();
+                    })
+    
+                        $(".button").click(function(){
+                            clearInterval(f);
+                            var index_1=$(this).index();
+                            index=index_1;
+                            $(".left_img").css("opacity","0");
+                            $(".left_img").eq(index).css("opacity","1");
+                            $(".button").css("background-color","#ccc");
+                            $(".button").eq(index).css("background-color","#fff");
+                            timesetter();
+                    })
+                })
+            </script>
+        </div>
+        <div class="right">
+            <p1><a href=".\y1-slx.html"><strong>·学习与学工有益结合，成绩与能力齐头并进——贾博驿</strong></a></p1>
+            <p>贾博驿学长就课内学习、学生工作、时间安排等为大家排忧解难，</p>
+            <p>助力行小缘们在期中考试和之后的学习中乘风破浪，奋勇向前！</p>
+            <p1><a href=".\y2.html"><strong>·全方位适应大学生活，从融入走向卓越——李宏涛</strong></a></p1>
+            <p>李宏涛学长结合自己大一的生活经历，</p>
+            <p>在学习、社交、学生工作等方面分享了一些曾经遇到的困扰和解决方法。</p>
+            <p1><a href=".\y3.html"><strong>·荆棘丛生的百花园里找到自己的玫瑰——李如钦</strong></a></p1>
+            <p>李如钦学长为大家排忧解难，</p>
+            <p>让你对精神内耗说“不”，</p>
+            <p>助力行小缘们在自己的赛道跑出精彩</p>
+            <a href="圆桌会.html">
+                <button class="fixed-button">返回</button>
+            </a>
+        </div>
+        
+    </section>
+    
+    
+
+    <section class="newsletter">
+        <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+        <form>
+        <input type="email" placeholder="请输入您的Email" required>
+        <button type="submit">送出</button>
+        </form>
+    </section>
+    
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    
+    </html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学业支持中心</title>
+    <link rel="stylesheet" href="question.css">
+
+</head>
+
+<body>
+    <header>
+    <h1>学业支持中心</h1>
+    <nav>
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">新闻公告</a></li>
+        <li onclick="show()"><a href="#">个人中心</a></li>
+        <script>
+            function show() {
+                alert("请先登录！");
+            }
+        </script>
+        <li><a href="#">关于我们</a></li>
+        <li><a href="enter.html">登录</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+    <section class="duration">
+        <p>这是一个头部插件</p>
+    </section>
+
+    
+
+    <div class="return">
+        <a href="#">
+            <img src="return.jpg">
+        </a>
+    </div>
+    <section class="Q1">
+    <div class="account">
+        <img src="avatar1.jpg">
+        <p><strong>用户328932</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        <p>求助</p>
+        <img src="Q1.png">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+            <button class="fixed-button-2" id="toggleButton1" onclick="toggleTextbox1()">解答</button>
+            
+     </div>
+     <div id="inputTextbox1" style="display:none;">
+                <input type="file" id="fileInput1" class="pinput">
+                <br>
+                <textarea id="textInput1" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+                <button onclick="uploadFile1()" class="upload"><strong>发送</strong></button>
+              </div><div id="uploadedContent1" class="uptent"></div>
+                
+            
+</section>
+
+<section class="Q1">
+    <div class="account">
+        <img src="avatar2.jpg">
+        <p><strong>用户884876</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        <p>这玩意是不是不能这么写啊</p>
+        <img src="Q2.png">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+        <a href="#">
+            <button class="fixed-button-2" id="toggleButton2" onclick="toggleTextbox2()">解答</button>
+        </a>
+        
+     </div>
+     <div id="inputTextbox2" style="display:none;">
+        <input type="file" id="fileInput2" class="pinput">
+        <br>
+        <textarea id="textInput2" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+        <button onclick="uploadFile2()" class="upload"><strong>发送</strong></button>
+      </div><div id="uploadedContent2" class="uptent"></div>
+</section>
+
+<section class="Q1">
+    <div class="account">
+        <img src="avatar3.jpg">
+        <p><strong>tomato</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        
+        <img src="Q3.jpg">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+        <a href="#">
+            <button class="fixed-button-2" id="toggleButton3" onclick="toggleTextbox3()">解答</button>
+        </a>
+    
+     </div>
+     <div id="inputTextbox3" style="display:none;">
+        <input type="file" id="fileInput3" class="pinput">
+        <br>
+        <textarea id="textInput3" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+        <button onclick="uploadFile3()" class="upload"><strong>发送</strong></button>
+      </div><div id="uploadedContent3" class="uptent"></div>
+</section>
+
+<section class="Q1">
+    <div class="account">
+        <img src="avatar1.jpg">
+        <p><strong>apple</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        <p>请问这个题干是什么意思？扩充为标准正交基不需要前提原来的向量组是标准正交的吗？ </p>
+        <img src="Qb-1.jpg">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+        <a href="#">
+            <button class="fixed-button-2" id="toggleButton4" onclick="toggleTextbox4()">解答</button>
+        </a>
+    
+     </div>
+     <div id="inputTextbox4" style="display:none;">
+        <input type="file" id="fileInput4" class="pinput">
+        <br>
+        <textarea id="textInput4" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+        <button onclick="uploadFile4()" class="upload"><strong>发送</strong></button>
+      </div><div id="uploadedContent4" class="uptent"></div>
+</section>
+
+<section class="Q1">
+    <div class="account">
+        <img src="avatar2.jpg">
+        <p><strong>淑芬杀我</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        <p>佬佬们这一步怎么得出的哇（大哭）</p>
+        <img src="Qb-2.jpg">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+        <a href="#">
+            <button class="fixed-button-2" id="toggleButton5" onclick="toggleTextbox5()">解答</button>
+        </a>
+    
+     </div>
+     <div id="inputTextbox5" style="display:none;">
+        <input type="file" id="fileInput5" class="pinput">
+        <br>
+        <textarea id="textInput5" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+        <button onclick="uploadFile5()" class="upload"><strong>发送</strong></button>
+      </div><div id="uploadedContent5" class="uptent"></div>
+</section>
+
+<section class="Q1">
+    <div class="account">
+        <img src="avatar3.jpg">
+        <p><strong>写不了一点</strong></p>
+    </div>
+    <div class="content">
+        <section>
+        <p>这到底是怎么能想到的</p>
+        <img src="Qb-3.jpg">
+    </section>
+    
+        <a href="#">
+            <button class="fixed-button-1" onclick="toggleFollow(this)">关注</button>
+        </a>
+        <a href="#">
+            <button class="fixed-button-2" id="toggleButton6" onclick="toggleTextbox6()">解答</button>
+        </a>
+    
+     </div>
+     <div id="inputTextbox6" style="display:none;">
+        <input type="file" id="fileInput6" class="pinput">
+        <br>
+        <textarea id="textInput6" class="input" placeholder="在此输入你的解答吧"></textarea><br>
+        <button onclick="uploadFile6()" class="upload"><strong>发送</strong></button>
+      </div><div id="uploadedContent6" class="uptent"></div>
+</section>
+
+<div class="turn">
+    <a href="#">
+        <button class="fixed-button">上一页</button>
+    </a>
+    <a href="#">
+        <button class="fixed-button">下一页</button>
+    </a>
+</div>
+
+
+<section class="newsletter">
+    <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+ <form>
+    <input type="email" placeholder="请输入您的Email" required>
+    <button type="submit">送出</button>
+ </form>
+</section>
+
+</main>
+<footer>
+<p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+
+
+</footer>
+</body>
+<script>
+    function uploadFile1() {
+      var fileInput = document.getElementById('fileInput1');
+      var textInput = document.getElementById('textInput1');
+      var uploadedContent = document.getElementById('uploadedContent1');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox1() {
+      var textbox = document.getElementById("inputTextbox1");
+      event.preventDefault();
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function uploadFile2() {
+      var fileInput = document.getElementById('fileInput2');
+      var textInput = document.getElementById('textInput2');
+      var uploadedContent = document.getElementById('uploadedContent2');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox2() {
+      var textbox = document.getElementById("inputTextbox2");
+      event.preventDefault();
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function uploadFile3() {
+      var fileInput = document.getElementById('fileInput3');
+      var textInput = document.getElementById('textInput3');
+      var uploadedContent = document.getElementById('uploadedContent3');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox3() {
+      var textbox = document.getElementById("inputTextbox3");
+      event.preventDefault();
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function uploadFile4() {
+      var fileInput = document.getElementById('fileInput4');
+      var textInput = document.getElementById('textInput4');
+      var uploadedContent = document.getElementById('uploadedContent4');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox4() {
+      var textbox = document.getElementById("inputTextbox4");
+      event.preventDefault();
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function uploadFile5() {
+      var fileInput = document.getElementById('fileInput5');
+      var textInput = document.getElementById('textInput5');
+      var uploadedContent = document.getElementById('uploadedContent5');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox5() {
+      var textbox = document.getElementById("inputTextbox5");
+      event.preventDefault();
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function uploadFile6() {
+      var fileInput = document.getElementById('fileInput6');
+      var textInput = document.getElementById('textInput6');
+      var uploadedContent = document.getElementById('uploadedContent6');
+      
+      var file = fileInput.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var uploadedItem = document.createElement('div');
+        uploadedItem.classList.add('uploadedItem');
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        uploadedItem.appendChild(img);
+        var text = document.createElement('p');
+        text.textContent = textInput.value;
+        uploadedItem.appendChild(text);
+        var br=document.createElement('br');
+        uploadedItem.appendChild(br);
+        uploadedContent.insertBefore(uploadedItem, uploadedContent.firstChild);
+        
+        fileInput.value = ''; 
+        textInput.value = ''; 
+      }
+      reader.readAsDataURL(file);
+    }
+    function toggleTextbox6() {
+      var textbox = document.getElementById("inputTextbox6");
+      event.preventDefault(); 
+      if (textbox.style.display === "none") {
+        textbox.style.display = "block";
+      } else {
+        textbox.style.display = "none";
+      }
+    }
+    function toggleFollow(button) {
+            event.preventDefault();
+            button.textContent = "已关注";
+            button.classList.add('clicked');
+        }
+  </script>
+
+</html>

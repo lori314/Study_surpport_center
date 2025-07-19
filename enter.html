@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>login</title>
+        <link rel="stylesheet" href="登录.css">
+    </head>
+    <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="continue.html">个人中心</a></li>
+            <li><a href="continue.html">关于我们</a></li>
+            <li><a href="enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    <body>
+        <div class="box">
+            <h2>登录</h2>
+            
+            <label>账号</label>
+        <input type="text">    
+        
+        
+            <label>密码</label>
+        
+        <input type="password">
+        
+        <div class="btn-box">
+            <a href="continue.html">忘记密码？</a>
+            <div>
+                
+                <button id="login">登录</button>
+                <script>  
+                    document.getElementById("login").onclick = function() {  
+                        window.location.href = "personal_center.html";
+                        alert('Login successfully!');
+                    };  
+                </script> 
+                <button>注册</button>
+            </div>
+        </div>
+    </body>
+</html>

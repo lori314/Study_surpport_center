@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="题库.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+    
+ 
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    <button class="fixed-button" onclick="goBack()">返回</button>
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="淑芬.jpg" alt="淑芬">
+        </a>
+            <h3><a href="#">淑芬</a></h3>
+        
+        </div>
+        <div class="wenzi" id="shufen">
+            <h3><a href="淑芬题库.html" style="color: aliceblue;">题库</a><br>
+            <a href="淑芬课件及教材.html">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br><br><br>
+            <h2>工科数分期中往年题及答案</h2>
+            <br><br><br>
+            <p class="wendang"><a href="数学分析\近年工科数分(1)期中试题及答案\2012-2013年工科数分(1)期中考题答案.doc">2012-2013年工科数分</a>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2013-2014年工科数分(1)期中考题答案.doc">2013-2014年工科数分</a>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2014-2015年工科数分(1)期中试题答案.docx">2014-2015年工科数分</a><br>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2015-2016年工科数分(1)期中试题答案.pdf">2015-2016年工科数分</a>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2016-2017年工科数分(1)期中试题答案.docx">2016-2017年工科数分</a>
+                <a href="资料/数学分析/近年工科数分(1)期中试题及答案/工科数分（17-18第一学期期中）（参考解答简版）.doc">2017-2018年工科数分</a><br>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2019-2020-1-工科数分期中试题解答.pdf">2019-2020年工科数分</a>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2020-2021-1学年工科数分期中试题答案.doc">2020-2021年工科数分</a>
+                <a href="数学分析\近年工科数分(1)期中试题及答案\2021-2022-1学年工科数分期中试题(带答案)20211205.pdf">2021-2022年工科数分</a>
+                <a href=""></a>
+                <a href=""></a>
+            </p>
+            <div id="btn">
+                <a href="数学分析\近年工科数分(1)期中试题及答案.rar">
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

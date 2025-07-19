@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>学业支持中心</title>
+        <link rel="stylesheet" href="课件及教材.css">
+    
+    </head>
+    
+    <body>
+        <header>
+        <h1>学业支持中心</h1>
+        <nav>
+        <ul>
+            <li><a href=".\index.html">首页</a></li>
+            <li><a href="news.html">新闻公告</a></li>
+            <li><a href="#">个人中心</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="enter.html">登录</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <main>
+        
+        <button class="fixed-button" onclick="goBack()">返回</button>
+      
+    
+    </section>
+    
+    
+    
+        
+    </section>
+    </div>
+    
+    <section class="act">
+       
+            <div class="floating-icon">
+            <a href="dian.html">
+            <img src="高代.jpg" alt="高代">
+        </a>
+            <h3><a href="#">高代</a></h3>
+        
+        </div>
+        <div class="wenzi" id="gaodai">
+            <h3><a href="高代题库.html">题库</a><br>
+            <a href="高代课件及教材.html" style="color: aliceblue;">课件及教参</a><br>
+            <a href="大佬笔记.html">大佬笔记</a></h3>
+
+        </div>
+        <div class="wenjian">
+            <br><br><br><br><br><br><br><br><br>
+            <h2>高等代数课件（更多课件参见一键下载）</h2>
+            <br><br>
+            <p class="wendang"><a href="资料\线性代数\工科高代(1)\char1exp.pptx">Chap1 多项式理论</a>
+                <a href="资料\线性代数\工科高代(1)\char2.pptx">Chap2 向量空间</a>
+                <a href="资料\线性代数\工科高代(1)\char3.pptx">Chap3 行列式</a><br>
+                <a href="资料/线性代数/工科高代(1)/char4I.pptx">Chap4 矩阵的代数运算1</a>
+                <a href="资料/线性代数/工科高代(1)/char4II.pptx">Chap4 矩阵的代数运算2</a><br>
+                <a href="资料\线性代数\工科高代(1)\char5.pptx">Chap5 矩阵的相合与相似1</a>
+                <a href="资料\线性代数\工科高代(1)\char5II.pptx">Chap5 矩阵的相合与相似2</a>
+                <a href="资料\线性代数\工科高代(1)\char5III.pptx">Chap5 矩阵的相合与相似3</a><br>
+
+            </p>
+            <br>
+            
+            <div id="btn">
+                <a href="线性代数\高代课件及教参.zip">
+            <button class="load" >
+                一键下载
+            </button>
+                </a>
+                <input type="file" id="file-input" style="display: none;">
+                <button class="load" onclick="selectFile()">
+                我要上传
+            </button>
+        </div>
+        </div>
+        
+        
+        </section>
+        <section class="newsletter">
+            <p>欢迎关注学支公众号，可不定期收到惊喜福利哦！</p>    
+         <form>
+            <input type="email" placeholder="请输入您的Email" required>
+            <button type="submit">送出</button>
+         </form>
+        </section>
+    
+    </main>
+    <footer>
+    <p>Copyright c 2023 学业支持中心 All Rights Reserved.</p>
+    
+    
+    </footer>
+    </body>
+    <script>
+        function selectFile() {
+        var fileInput = document.getElementById('file-input');
+        fileInput.click(); // 触发选择文件的操作
+        fileInput.addEventListener('change', upload); // 当文件选择完毕后调用upload函数
+    }
+
+        function upload(){
+            var fileInput = document.getElementById('file-input');
+            var file = fileInput.files[0]; // 获取选择的文件
+
+            if (file) {
+                var formData = new FormData();
+                formData.append('file', file); // 创建包含文件的 FormData 对象
+
+                // 发送 POST 请求来上传文件
+                fetch('上传页面.html', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('File Uploaded');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+                window.location.href="上传页面.html";
+            }
+        }
+        function goBack() {
+            window.location.href="dian.html";
+    }
+    </script>
+    
+    </html>

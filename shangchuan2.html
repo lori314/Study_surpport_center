@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff; /* 蓝色调背景 */
+      padding: 20px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    img {
+      max-width: 100%; /* 图片适应页面大小 */
+      height: auto;
+    }
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #4682b4; /* 分割线为蓝色 */
+    }
+  </style>
+  <title>答疑墙</title>
+</head>
+<body>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+    <input type="text" id="textInput" placeholder="请输入文字">
+    <input type="button" value="上传" onclick="uploadImage()">
+  </form>
+  <div id="displayArea"></div>
+
+  <script>
+    function previewImage(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var image = new Image();
+        image.src = e.target.result;
+        var displayArea = document.getElementById('displayArea');
+        displayArea.appendChild(image);
+      }
+      reader.readAsDataURL(file);
+    }
+
+    function uploadImage() {
+      var textInput = document.getElementById('textInput');
+      var displayArea = document.getElementById('displayArea');
+      var newText = textInput.value;
+      var newImage = displayArea.innerHTML;
+      var newContent = newImage + "<p>" + newText + "</p ><hr>";
+      displayArea.innerHTML = newContent;
+      textInput.value = '';
+      document.getElementById('fileInput').value = ''; // 清空文件选择
+    }
+  </script>
+</body>
+</html>
